@@ -99,6 +99,58 @@ const Index = () => {
           'Префикс [ULTIMATE]',
           'Персональный саппорт'
         ]
+      },
+      {
+        name: 'ELITE',
+        price: '2499₽',
+        icon: 'Star',
+        color: 'from-purple-600 to-indigo-700',
+        features: [
+          'Все из ULTIMATE',
+          'Доступ к /kit elite',
+          'Приватные регионы до 50',
+          'Телепортация /home (30 точек)',
+          'Полёт в выживании (30 мин/день)',
+          'Префикс [ELITE]',
+          'Приоритетная очередь саппорта',
+          'Уникальные эффекты частиц'
+        ]
+      },
+      {
+        name: 'LEGEND',
+        price: '4999₽',
+        icon: 'Award',
+        color: 'from-orange-500 to-red-600',
+        features: [
+          'Все из ELITE',
+          'Доступ к /kit legend',
+          'Приватные регионы до 100',
+          'Телепортация /home (50 точек)',
+          'Полёт в выживании (безлимит)',
+          'Префикс [LEGEND] с анимацией',
+          'Личный модератор',
+          'Доступ к эксклюзивным мирам',
+          'Команда /god (10 мин/день)'
+        ]
+      },
+      {
+        name: 'IMPERATOR',
+        price: '7777₽',
+        icon: 'Crown',
+        color: 'from-yellow-400 via-amber-500 to-orange-600',
+        features: [
+          'Все из LEGEND',
+          'Доступ к /kit imperator',
+          'Приватные регионы безлимит',
+          'Телепортация /home безлимит',
+          'Полёт везде без ограничений',
+          'Префикс [IMPERATOR] с эффектами',
+          'Личная команда модераторов',
+          'Создание собственных событий',
+          'Команда /god безлимит',
+          'Именная статуя на спавне',
+          'Эксклюзивный скин персонажа'
+        ]
       }
     ],
     skywars: [
@@ -295,7 +347,7 @@ const Index = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
               {privileges.map((priv, idx) => (
                 <Card key={idx} className={`bg-gradient-to-br ${priv.color} border-4 border-black hover:scale-105 transition-transform shadow-2xl`}>
                   <CardHeader>
