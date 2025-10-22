@@ -47,7 +47,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
         {[
-          { icon: 'Users', title: 'Активное сообщество', desc: 'Более 5000 игроков онлайн' },
+          { icon: 'Users', title: 'Активное сообщество', desc: 'Дружное комьюнити игроков' },
           { icon: 'Zap', title: 'Без лагов', desc: 'Мощные сервера и оптимизация' },
           { icon: 'Shield', title: 'Защита от гриферов', desc: 'Система регионов и модерация' }
         ].map((feature, idx) => (
