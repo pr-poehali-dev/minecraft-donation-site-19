@@ -25,12 +25,12 @@ interface CoinPackage {
 }
 
 const coinPackages: CoinPackage[] = [
-  { coins: 100, price: '50₽', color: 'from-gray-600 to-gray-700' },
-  { coins: 250, price: '100₽', bonus: 10, color: 'from-blue-600 to-blue-700' },
-  { coins: 500, price: '200₽', bonus: 25, color: 'from-purple-600 to-purple-700' },
-  { coins: 1000, price: '350₽', bonus: 100, color: 'from-orange-600 to-orange-700' },
-  { coins: 2500, price: '800₽', bonus: 300, color: 'from-red-600 to-red-700' },
-  { coins: 5000, price: '1500₽', bonus: 750, color: 'from-yellow-500 to-amber-600' }
+  { coins: 100, price: '33₽', color: 'from-gray-600 to-gray-700' },
+  { coins: 250, price: '65₽', bonus: 10, color: 'from-blue-600 to-blue-700' },
+  { coins: 500, price: '130₽', bonus: 25, color: 'from-purple-600 to-purple-700' },
+  { coins: 1000, price: '228₽', bonus: 100, color: 'from-orange-600 to-orange-700' },
+  { coins: 2500, price: '520₽', bonus: 300, color: 'from-red-600 to-red-700' },
+  { coins: 5000, price: '975₽', bonus: 750, color: 'from-yellow-500 to-amber-600' }
 ];
 
 const CoinsSection = ({ servers, selectedServer, onServerChange, userNickname }: CoinsSectionProps) => {

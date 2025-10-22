@@ -26,7 +26,7 @@ const anarchyCases: Case[] = [
   {
     id: 'starter',
     name: 'Стартовый кейс',
-    price: 50,
+    price: 33,
     icon: 'Package',
     color: 'from-gray-600 to-gray-800',
     description: 'Базовые ресурсы для старта',
@@ -35,7 +35,7 @@ const anarchyCases: Case[] = [
   {
     id: 'rare',
     name: 'Редкий кейс',
-    price: 150,
+    price: 98,
     icon: 'Gift',
     color: 'from-blue-600 to-blue-800',
     description: 'Ценные предметы и ресурсы',
@@ -44,7 +44,7 @@ const anarchyCases: Case[] = [
   {
     id: 'epic',
     name: 'Эпический кейс',
-    price: 350,
+    price: 228,
     icon: 'Sparkles',
     color: 'from-purple-600 to-purple-800',
     description: 'Мощные артефакты',
@@ -53,7 +53,7 @@ const anarchyCases: Case[] = [
   {
     id: 'legendary',
     name: 'Легендарный кейс',
-    price: 750,
+    price: 488,
     icon: 'Trophy',
     color: 'from-yellow-500 to-orange-600',
     description: 'Эксклюзивные награды',
@@ -62,7 +62,7 @@ const anarchyCases: Case[] = [
   {
     id: 'mythic',
     name: 'Мифический кейс',
-    price: 1500,
+    price: 975,
     icon: 'Crown',
     color: 'from-red-600 to-pink-700',
     description: 'Сокровища богов',
@@ -74,7 +74,7 @@ const survivalCases: Case[] = [
   {
     id: 'privilege_knight',
     name: 'Кейс "Рыцарь"',
-    price: 200,
+    price: 130,
     icon: 'Sword',
     color: 'from-slate-600 to-slate-800',
     description: 'Шанс получить привилегию',
@@ -83,7 +83,7 @@ const survivalCases: Case[] = [
   {
     id: 'privilege_guardian',
     name: 'Кейс "Хранитель"',
-    price: 500,
+    price: 325,
     icon: 'Shield',
     color: 'from-blue-600 to-blue-800',
     description: 'Повышенный шанс редких привилегий',
@@ -92,7 +92,7 @@ const survivalCases: Case[] = [
   {
     id: 'privilege_titan',
     name: 'Кейс "Титан"',
-    price: 1000,
+    price: 650,
     icon: 'Mountain',
     color: 'from-zinc-600 to-stone-700',
     description: 'Высокие привилегии',
@@ -101,7 +101,7 @@ const survivalCases: Case[] = [
   {
     id: 'privilege_master',
     name: 'Кейс "Магистр"',
-    price: 2000,
+    price: 1300,
     icon: 'Wand2',
     color: 'from-purple-600 to-indigo-700',
     description: 'Элитные привилегии',
@@ -110,7 +110,7 @@ const survivalCases: Case[] = [
   {
     id: 'privilege_legend',
     name: 'Кейс "Легенда"',
-    price: 5000,
+    price: 3250,
     icon: 'Crown',
     color: 'from-yellow-400 to-orange-600',
     description: 'Легендарные привилегии',
