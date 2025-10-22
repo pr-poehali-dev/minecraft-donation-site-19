@@ -139,16 +139,16 @@ const PrivilegesSection = () => {
               <thead>
                 <tr className="border-b-4 border-black">
                   <th className="text-left py-4 px-4 font-bold text-lg sticky left-0 bg-[#2C2C2C]">Возможность</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-gray-400">Путник</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-slate-400">Рыцарь</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-blue-400">Хранитель</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-stone-400">Титан</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-purple-400">Магистр</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-emerald-400">Властитель</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-red-400">Повелитель</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-orange-400">Владыка</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">Диоген</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">Легенда</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-gray-400">LITE</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-slate-400">ELITE</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-blue-400">TITAN</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-stone-400">MASTER</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-purple-400">LEGEND</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-emerald-400">OVERLORD</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-red-400">PHOENIX</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-orange-400">PHOENIX+</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">PHOENIX++</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">PHOENIX+++</th>
                 </tr>
               </thead>
               <tbody>
