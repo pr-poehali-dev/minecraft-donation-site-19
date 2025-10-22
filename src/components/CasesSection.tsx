@@ -72,49 +72,76 @@ const anarchyCases: Case[] = [
 
 const survivalCases: Case[] = [
   {
-    id: 'privilege_knight',
+    id: 'privilege_lite',
+    name: 'Кейс "LITE"',
+    price: 65,
+    icon: 'Package',
+    color: 'from-gray-600 to-gray-800',
+    description: 'Стартовый кейс',
+    rewards: ['Привилегия LITE (100%)', '50 койнов (бонус)']
+  },
+  {
+    id: 'privilege_warrior',
     name: 'Кейс "WARRIOR"',
     price: 130,
     icon: 'Sword',
     color: 'from-amber-600 to-amber-800',
     description: 'Шанс получить привилегию',
-    rewards: ['Привилегия LITE (60%)', 'Привилегия WARRIOR (30%)', 'Привилегия ELITE (10%)', '100 койнов (бонус)']
+    rewards: ['Привилегия LITE (50%)', 'Привилегия WARRIOR (40%)', 'Привилегия ELITE (10%)', '100 койнов (бонус)']
   },
   {
-    id: 'privilege_guardian',
+    id: 'privilege_elite',
     name: 'Кейс "ELITE"',
-    price: 325,
+    price: 220,
     icon: 'Shield',
     color: 'from-blue-600 to-blue-800',
     description: 'Повышенный шанс редких привилегий',
-    rewards: ['Привилегия WARRIOR (40%)', 'Привилегия ELITE (35%)', 'Привилегия TITAN (20%)', 'Привилегия MASTER (5%)']
+    rewards: ['Привилегия WARRIOR (35%)', 'Привилегия ELITE (45%)', 'Привилегия TITAN (20%)']
   },
   {
     id: 'privilege_titan',
     name: 'Кейс "TITAN"',
-    price: 650,
+    price: 520,
     icon: 'Mountain',
     color: 'from-cyan-600 to-cyan-800',
     description: 'Высокие привилегии',
-    rewards: ['Привилегия ELITE (30%)', 'Привилегия TITAN (40%)', 'Привилегия MASTER (25%)', 'Привилегия LEGEND (5%)']
+    rewards: ['Привилегия ELITE (30%)', 'Привилегия TITAN (45%)', 'Привилегия MASTER (25%)']
   },
   {
     id: 'privilege_master',
     name: 'Кейс "MASTER"',
-    price: 1300,
+    price: 1200,
     icon: 'Wand2',
     color: 'from-purple-600 to-purple-800',
     description: 'Элитные привилегии',
-    rewards: ['Привилегия TITAN (25%)', 'Привилегия MASTER (40%)', 'Привилегия LEGEND (30%)', 'Привилегия OVERLORD (5%)']
+    rewards: ['Привилегия TITAN (30%)', 'Привилегия MASTER (45%)', 'Привилегия LEGEND (25%)']
   },
   {
     id: 'privilege_legend',
     name: 'Кейс "LEGEND"',
-    price: 3250,
-    icon: 'Crown',
+    price: 2100,
+    icon: 'Star',
     color: 'from-yellow-400 to-yellow-600',
     description: 'Легендарные привилегии',
-    rewards: ['Привилегия MASTER (25%)', 'Привилегия LEGEND (35%)', 'Привилегия OVERLORD (25%)', 'Привилегия PHOENIX (12%)', 'Привилегия YOUTUBE (3%)']
+    rewards: ['Привилегия MASTER (25%)', 'Привилегия LEGEND (45%)', 'Привилегия OVERLORD (25%)', 'Привилегия PHOENIX (5%)']
+  },
+  {
+    id: 'privilege_overlord',
+    name: 'Кейс "OVERLORD"',
+    price: 3100,
+    icon: 'Gem',
+    color: 'from-emerald-600 to-emerald-800',
+    description: 'Премиум привилегии',
+    rewards: ['Привилегия LEGEND (30%)', 'Привилегия OVERLORD (45%)', 'Привилегия PHOENIX (20%)', 'Привилегия YOUTUBE (5%)']
+  },
+  {
+    id: 'privilege_phoenix',
+    name: 'Кейс "PHOENIX"',
+    price: 4100,
+    icon: 'Flame',
+    color: 'from-red-600 to-red-800',
+    description: 'Эксклюзивные привилегии',
+    rewards: ['Привилегия OVERLORD (30%)', 'Привилегия PHOENIX (50%)', 'Привилегия YOUTUBE (20%)']
   }
 ];
 

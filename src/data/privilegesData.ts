@@ -22,8 +22,8 @@ export const servers: Server[] = [
 export const privilegesByServer: Record<string, Privilege[]> = {
   anarchy: [
     {
-      name: 'Путник',
-      price: '50₽',
+      name: 'LITE',
+      price: '77₽',
       icon: 'Footprints',
       color: 'from-gray-500 to-gray-700',
       features: [
@@ -34,8 +34,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Рыцарь',
-      price: '180₽',
+      name: 'WARRIOR',
+      price: '177₽',
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
@@ -48,8 +48,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Хранитель',
-      price: '505₽',
+      name: 'ELITE',
+      price: '277₽',
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
@@ -63,8 +63,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Титан',
-      price: '1155₽',
+      name: 'TITAN',
+      price: '777₽',
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
@@ -79,8 +79,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Магистр',
-      price: '1805₽',
+      name: 'MASTER',
+      price: '1777₽',
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
@@ -96,8 +96,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Властитель',
-      price: '2455₽',
+      name: 'LEGEND',
+      price: '2777₽',
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
@@ -113,8 +113,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Повелитель',
-      price: '3105₽',
+      name: 'OVERLORD',
+      price: '3777₽',
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
@@ -131,8 +131,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Владыка',
-      price: '3755₽',
+      name: 'PHOENIX',
+      price: '4777₽',
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
@@ -150,8 +150,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Диоген',
-      price: '4405₽',
+      name: 'YOUTUBE',
+      price: '7777₽',
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
@@ -169,33 +169,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
         'Возможность создания телепортов'
       ]
     },
-    {
-      name: 'Легенда Mellicemo',
-      price: '5055₽',
-      icon: 'Crown',
-      color: 'from-yellow-400 via-orange-500 to-red-600',
-      features: [
-        'Все из Диоген',
-        'Доступ к /kit легенда',
-        'Бессмертие 360 секунд',
-        'Безлимит дополнительных слотов',
-        'Безлимит точек /home',
-        'Префикс [ЛЕГЕНДА MELLICEMO] с эффектами',
-        'Команда /heal без кд',
-        'Полёт безлимит',
-        'Команда /god безлимит',
-        'Личный сундук безлимит',
-        'Доступ ко всем эксклюзивным зонам',
-        'Именная статуя на спавне',
-        'Личная команда модераторов',
-        'Возможность проводить ивенты'
-      ]
-    }
+
   ],
   survival: [
     {
-      name: 'Путник',
-      price: '50₽',
+      name: 'LITE',
+      price: '77₽',
       icon: 'Footprints',
       color: 'from-gray-500 to-gray-700',
       features: [
@@ -206,8 +185,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Рыцарь',
-      price: '180₽',
+      name: 'WARRIOR',
+      price: '177₽',
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
@@ -220,8 +199,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Хранитель',
-      price: '505₽',
+      name: 'ELITE',
+      price: '277₽',
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
@@ -235,8 +214,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Титан',
-      price: '1155₽',
+      name: 'TITAN',
+      price: '777₽',
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
@@ -251,8 +230,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Магистр',
-      price: '1805₽',
+      name: 'MASTER',
+      price: '1777₽',
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
@@ -268,8 +247,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Властитель',
-      price: '2455₽',
+      name: 'LEGEND',
+      price: '2777₽',
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
@@ -285,8 +264,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Повелитель',
-      price: '3105₽',
+      name: 'OVERLORD',
+      price: '3777₽',
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
@@ -303,8 +282,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Владыка',
-      price: '3755₽',
+      name: 'PHOENIX',
+      price: '4777₽',
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
@@ -321,8 +300,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Диоген',
-      price: '4405₽',
+      name: 'YOUTUBE',
+      price: '7777₽',
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
@@ -363,8 +342,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
   ],
   skywars: [
     {
-      name: 'Путник',
-      price: '50₽',
+      name: 'LITE',
+      price: '77₽',
       icon: 'Footprints',
       color: 'from-gray-500 to-gray-700',
       features: [
@@ -375,8 +354,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Рыцарь',
-      price: '180₽',
+      name: 'WARRIOR',
+      price: '177₽',
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
@@ -389,8 +368,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Хранитель',
-      price: '505₽',
+      name: 'ELITE',
+      price: '277₽',
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
@@ -405,8 +384,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Титан',
-      price: '1155₽',
+      name: 'TITAN',
+      price: '777₽',
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
@@ -421,8 +400,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Магистр',
-      price: '1805₽',
+      name: 'MASTER',
+      price: '1777₽',
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
@@ -438,8 +417,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Властитель',
-      price: '2455₽',
+      name: 'LEGEND',
+      price: '2777₽',
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
@@ -456,8 +435,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Повелитель',
-      price: '3105₽',
+      name: 'OVERLORD',
+      price: '3777₽',
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
@@ -474,8 +453,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Владыка',
-      price: '3755₽',
+      name: 'PHOENIX',
+      price: '4777₽',
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
@@ -492,8 +471,8 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       ]
     },
     {
-      name: 'Диоген',
-      price: '4405₽',
+      name: 'YOUTUBE',
+      price: '7777₽',
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
