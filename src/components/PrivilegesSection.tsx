@@ -7,22 +7,22 @@ const PrivilegesSection = () => {
 
   const survivalData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
-    ['Приватные регионы', '3', '7', '15', '30', '50', '75', '100', '150', '∞', '∞'],
-    ['Точки /home', '2', '5', '10', '20', '35', '50', '70', '100', '∞', '∞'],
+    ['Доступ к /kit', 'lite', 'warrior', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'youtube'],
+    ['Приватные регионы', '3', '7', '15', '30', '50', '75', '100', '150', '∞'],
+    ['Точки /home', '2', '5', '10', '20', '35', '50', '70', '100', '∞'],
     ['Полет в лобби', false, true, true, true, true, true, true, true, true, true],
-    ['Полет в выживании', false, false, false, '20м/д', '40м/д', '60м/д', '90м/д', '∞', '∞', '∞'],
+    ['Полет в выживании', false, false, false, '20м/д', '40м/д', '60м/д', '90м/д', '∞', '∞'],
     ['Креатив в приватном мире', false, false, true, true, true, true, true, true, true, true],
     ['Команда /feed', false, false, false, false, true, true, true, true, true, true],
     ['Команда /heal', false, false, false, false, false, false, true, true, true, true],
-    ['Команда /god', false, false, false, false, false, '5м/д', '8м/д', '10м/д', '15м/д', '∞'],
+    ['Команда /god', false, false, false, false, false, '5м/д', '8м/д', '10м/д', '∞'],
     ['Персональный саппорт', false, false, true, true, true, true, true, true, true, true],
     ['Личный модератор', false, false, false, false, true, true, true, true, true, true],
     ['Личная команда модераторов', false, false, false, false, false, false, false, false, false, true],
     ['Приоритетная очередь', false, false, false, true, true, true, true, true, true, true],
     ['Уникальные эффекты частиц', false, false, false, true, true, true, true, true, true, true],
     ['Доступ к эксклюзивным мирам', false, false, false, false, true, true, true, true, true, true],
-    ['Личный сундук', false, false, false, false, false, '54', '81', '108', '135', '∞'],
+    ['Личный сундук', false, false, false, false, false, '54', '81', '108', '∞'],
     ['Создание варпов', false, false, false, false, false, true, true, true, true, true],
     ['Создание своих миров', false, false, false, false, false, false, false, false, true, true],
     ['Команды /time и /weather', false, false, false, false, false, false, false, false, true, true],
@@ -31,20 +31,20 @@ const PrivilegesSection = () => {
     ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
     ['Эксклюзивный скин', false, false, false, false, false, false, false, false, true, true],
     ['Создание плагинов', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
+    ['Цена', '77₽', '177₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽']
   ];
 
   const anarchyData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
-    ['Бессмертие после входа', '30с', '60с', '90с', '120с', '150с', '180с', '240с', '270с', '300с', '360с'],
-    ['Дополнительные слоты', '2', '5', '10', '15', '20', '25', '28', '30', '35', '∞'],
-    ['Точки /home', false, '1', '3', '5', '7', '10', '15', '18', '25', '∞'],
+    ['Доступ к /kit', 'lite', 'warrior', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'youtube'],
+    ['Бессмертие после входа', '30с', '60с', '90с', '120с', '150с', '180с', '240с', '270с', '300с'],
+    ['Дополнительные слоты', '2', '5', '10', '15', '20', '25', '28', '30', '∞'],
+    ['Точки /home', false, '1', '3', '5', '7', '10', '15', '18', '∞'],
     ['Команда /feed', false, false, false, true, true, true, true, true, true, true],
-    ['Команда /heal', false, false, false, false, '5м кд', '3м кд', '1м кд', 'без кд', 'без кд', 'без кд'],
-    ['Полет', false, false, false, '15м/д', '25м/д', '40м/д', '60м/д', '90м/д', '∞', '∞'],
-    ['Команда /god', false, false, false, false, false, false, '5м/д', '8м/д', '12м/д', '∞'],
-    ['Личный сундук', false, false, false, false, '27', '54', '81', '108', '135', '∞'],
+    ['Команда /heal', false, false, false, false, '5м кд', '3м кд', '1м кд', 'без кд', 'без кд'],
+    ['Полет', false, false, false, '15м/д', '25м/д', '40м/д', '60м/д', '90м/д', '∞'],
+    ['Команда /god', false, false, false, false, false, false, '5м/д', '8м/д', '∞'],
+    ['Личный сундук', false, false, false, false, '27', '54', '81', '108', '∞'],
     ['Приоритетный вход', false, false, true, true, true, true, true, true, true, true],
     ['Подземные зоны', false, false, false, false, false, false, false, true, true, true],
     ['Эксклюзивные миры', false, false, false, false, false, false, false, false, true, true],
@@ -52,16 +52,16 @@ const PrivilegesSection = () => {
     ['Личная команда модераторов', false, false, false, false, false, false, false, false, false, true],
     ['Проведение ивентов', false, false, false, false, false, false, false, false, false, true],
     ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
+    ['Цена', '77₽', '177₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽']
   ];
 
   const skywarsData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
-    ['Множитель опыта', 'x1.5', 'x2', 'x3', 'x5', 'x7', 'x10', 'x13', 'x16', 'x18', 'x20'],
-    ['Выбор карты', '1/час', '30мин', '∞', '∞', '∞', '∞', '∞', '∞', '∞', '∞'],
+    ['Доступ к /kit', 'lite', 'warrior', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'youtube'],
+    ['Множитель опыта', 'x1.5', 'x2', 'x3', 'x5', 'x7', 'x10', 'x13', 'x16', 'x18'],
+    ['Выбор карты', '1/час', '30мин', '∞', '∞', '∞', '∞', '∞', '∞', '∞'],
     ['Приоритетный вход', false, false, true, true, true, true, true, true, true, true],
-    ['Уникальные скины', false, false, '2', '5', '8', '12', '15', '20', '25', '∞'],
+    ['Уникальные скины', false, false, '2', '5', '8', '12', '15', '20', '∞'],
     ['Доступ к VIP-лобби', false, false, true, true, true, true, true, true, true, true],
     ['Доступ к Elite-лобби', false, false, false, true, true, true, true, true, true, true],
     ['Персональное лобби', false, false, false, false, true, true, true, true, true, true],
@@ -74,7 +74,7 @@ const PrivilegesSection = () => {
     ['Spawn-эффекты', false, false, false, false, false, false, false, true, true, true],
     ['Particle-эффекты', false, false, false, false, false, false, false, false, true, true],
     ['Kill-эффекты', false, false, false, false, false, false, true, true, true, true],
-    ['Приватные игры (игроков)', false, false, false, false, '8', '12', '16', '24', '∞', '∞'],
+    ['Приватные игры (игроков)', false, false, false, false, '8', '12', '16', '24', '∞'],
     ['Модерация игр', false, false, false, false, false, true, true, true, true, true],
     ['Команда /heal в лобби', false, false, false, false, true, true, true, true, true, true],
     ['Команда /fly в лобби', false, false, false, false, false, true, true, true, true, true],
@@ -85,7 +85,7 @@ const PrivilegesSection = () => {
     ['Именная карта', false, false, false, false, false, false, true, true, true, true],
     ['Статуя в главном лобби', false, false, false, false, false, false, false, false, false, true],
     ['Влияние на развитие', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
+    ['Цена', '77₽', '177₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽']
   ];
 
   const data = selectedMode === 'survival' ? survivalData : selectedMode === 'anarchy' ? anarchyData : skywarsData;
@@ -140,15 +140,14 @@ const PrivilegesSection = () => {
                 <tr className="border-b-4 border-black">
                   <th className="text-left py-4 px-4 font-bold text-lg sticky left-0 bg-[#2C2C2C]">Возможность</th>
                   <th className="text-center py-4 px-4 font-bold text-sm text-gray-400">LITE</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-slate-400">ELITE</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-blue-400">TITAN</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-stone-400">MASTER</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-purple-400">LEGEND</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-amber-500">WARRIOR</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-blue-400">ELITE</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">TITAN</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-purple-500">MASTER</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">LEGEND</th>
                   <th className="text-center py-4 px-4 font-bold text-sm text-emerald-400">OVERLORD</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-red-400">PHOENIX</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-orange-400">PHOENIX+</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">DIOGEN</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">LEGENDA</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-red-500">PHOENIX</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-pink-500">YOUTUBE</th>
                 </tr>
               </thead>
               <tbody>
