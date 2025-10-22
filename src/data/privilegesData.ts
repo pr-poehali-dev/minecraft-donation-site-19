@@ -28,7 +28,7 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       color: 'from-gray-500 to-gray-700',
       features: [
         'Цветной ник в чате',
-        'Доступ к /kit путник',
+        'Доступ к /kit lite',
         'Бессмертие 30 секунд после входа',
         '2 дополнительных слота инвентаря'
       ]
@@ -39,12 +39,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
-        'Все из Путник',
-        'Доступ к /kit рыцарь',
+        'Все из LITE',
+        'Доступ к /kit warrior',
         'Бессмертие 60 секунд после входа',
         '5 дополнительных слотов инвентаря',
         'Возможность ставить точку /home',
-        'Префикс [РЫЦАРЬ]'
+        'Префикс [WARRIOR]'
       ]
     },
     {
@@ -53,12 +53,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
-        'Все из Рыцарь',
-        'Доступ к /kit хранитель',
+        'Все из WARRIOR',
+        'Доступ к /kit elite',
         'Бессмертие 90 секунд после входа',
         '10 дополнительных слотов',
         '3 точки /home',
-        'Префикс [ХРАНИТЕЛЬ]',
+        'Префикс [ELITE]',
         'Приоритетный вход на сервер'
       ]
     },
@@ -68,12 +68,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
-        'Все из Хранитель',
-        'Доступ к /kit титан',
+        'Все из ELITE',
+        'Доступ к /kit titan',
         'Бессмертие 120 секунд',
         '15 дополнительных слотов',
         '5 точек /home',
-        'Префикс [ТИТАН]',
+        'Префикс [TITAN]',
         'Команда /feed',
         'Возможность летать 15 мин/день'
       ]
@@ -84,12 +84,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
-        'Все из Титан',
-        'Доступ к /kit магистр',
+        'Все из TITAN',
+        'Доступ к /kit master',
         'Бессмертие 150 секунд',
         '20 дополнительных слотов',
         '7 точек /home',
-        'Префикс [МАГИСТР]',
+        'Префикс [MASTER]',
         'Команда /heal (5 мин кд)',
         'Полёт 25 мин/день',
         'Личный сундук 27 слотов'
@@ -101,12 +101,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
-        'Все из Магистр',
-        'Доступ к /kit властитель',
+        'Все из MASTER',
+        'Доступ к /kit legend',
         'Бессмертие 180 секунд',
         '25 дополнительных слотов',
         '10 точек /home',
-        'Префикс [ВЛАСТИТЕЛЬ]',
+        'Префикс [LEGEND]',
         'Команда /heal (3 мин кд)',
         'Полёт 40 мин/день',
         'Личный сундук 54 слота'
@@ -118,12 +118,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
-        'Все из Властитель',
-        'Доступ к /kit повелитель',
+        'Все из LEGEND',
+        'Доступ к /kit overlord',
         'Бессмертие 240 секунд',
         '28 дополнительных слотов',
         '15 точек /home',
-        'Префикс [ПОВЕЛИТЕЛЬ]',
+        'Префикс [OVERLORD]',
         'Команда /heal (1 мин кд)',
         'Полёт 60 мин/день',
         'Команда /god (5 мин/день)',
@@ -136,12 +136,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
-        'Все из Повелитель',
-        'Доступ к /kit владыка',
+        'Все из OVERLORD',
+        'Доступ к /kit phoenix',
         'Бессмертие 270 секунд',
         '30 дополнительных слотов',
         '18 точек /home',
-        'Префикс [ВЛАДЫКА]',
+        'Префикс [PHOENIX]',
         'Команда /heal без кд',
         'Полёт 90 мин/день',
         'Команда /god (8 мин/день)',
@@ -155,12 +155,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
-        'Все из Владыка',
-        'Доступ к /kit диоген',
+        'Все из PHOENIX',
+        'Доступ к /kit youtube',
         'Бессмертие 300 секунд',
         '35 дополнительных слотов',
         '25 точек /home',
-        'Префикс [ДИОГЕН] с анимацией',
+        'Префикс [YOUTUBE] с анимацией',
         'Команда /heal без кд',
         'Полёт безлимит',
         'Команда /god (12 мин/день)',
@@ -179,7 +179,7 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       color: 'from-gray-500 to-gray-700',
       features: [
         'Цветной ник в чате',
-        'Доступ к /kit путник',
+        'Доступ к /kit lite',
         'Приватные регионы до 3',
         'Телепортация /home (2 точки)'
       ]
@@ -190,12 +190,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
-        'Все из Путник',
-        'Доступ к /kit рыцарь',
+        'Все из LITE',
+        'Доступ к /kit warrior',
         'Приватные регионы до 7',
         'Телепортация /home (5 точек)',
         'Возможность летать в лобби',
-        'Префикс [РЫЦАРЬ]'
+        'Префикс [WARRIOR]'
       ]
     },
     {
@@ -204,12 +204,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
-        'Все из Рыцарь',
-        'Доступ к /kit хранитель',
+        'Все из WARRIOR',
+        'Доступ к /kit elite',
         'Приватные регионы до 15',
         'Телепортация /home (10 точек)',
         'Креатив в приватном мире',
-        'Префикс [ХРАНИТЕЛЬ]',
+        'Префикс [ELITE]',
         'Персональный саппорт'
       ]
     },
@@ -219,12 +219,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
-        'Все из Хранитель',
-        'Доступ к /kit титан',
+        'Все из ELITE',
+        'Доступ к /kit titan',
         'Приватные регионы до 30',
         'Телепортация /home (20 точек)',
         'Полёт в выживании (20 мин/день)',
-        'Префикс [ТИТАН]',
+        'Префикс [TITAN]',
         'Приоритетная очередь саппорта',
         'Уникальные эффекты частиц'
       ]
@@ -235,12 +235,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
-        'Все из Титан',
-        'Доступ к /kit магистр',
+        'Все из TITAN',
+        'Доступ к /kit master',
         'Приватные регионы до 50',
         'Телепортация /home (35 точек)',
         'Полёт в выживании (40 мин/день)',
-        'Префикс [МАГИСТР]',
+        'Префикс [MASTER]',
         'Личный модератор',
         'Доступ к эксклюзивным мирам',
         'Команда /feed'
@@ -252,12 +252,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
-        'Все из Магистр',
-        'Доступ к /kit властитель',
+        'Все из MASTER',
+        'Доступ к /kit legend',
         'Приватные регионы до 75',
         'Телепортация /home (50 точек)',
         'Полёт в выживании (60 мин/день)',
-        'Префикс [ВЛАСТИТЕЛЬ]',
+        'Префикс [LEGEND]',
         'Команда /god (5 мин/день)',
         'Личный сундук 54 слота',
         'Возможность создавать варпы'
@@ -269,12 +269,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
-        'Все из Властитель',
-        'Доступ к /kit повелитель',
+        'Все из LEGEND',
+        'Доступ к /kit overlord',
         'Приватные регионы до 100',
         'Телепортация /home (70 точек)',
         'Полёт в выживании (90 мин/день)',
-        'Префикс [ПОВЕЛИТЕЛЬ]',
+        'Префикс [OVERLORD]',
         'Команда /god (8 мин/день)',
         'Личный сундук 81 слот',
         'Эксклюзивные биомы',
@@ -287,12 +287,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
-        'Все из Повелитель',
-        'Доступ к /kit владыка',
+        'Все из OVERLORD',
+        'Доступ к /kit phoenix',
         'Приватные регионы до 150',
         'Телепортация /home (100 точек)',
         'Полёт в выживании (безлимит)',
-        'Префикс [ВЛАДЫКА] с анимацией',
+        'Префикс [PHOENIX] с анимацией',
         'Команда /god (10 мин/день)',
         'Личный сундук 108 слотов',
         'Доступ к подземным сокровищам',
@@ -305,12 +305,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
-        'Все из Владыка',
-        'Доступ к /kit диоген',
+        'Все из PHOENIX',
+        'Доступ к /kit youtube',
         'Приватные регионы безлимит',
         'Телепортация /home безлимит',
         'Полёт везде без ограничений',
-        'Префикс [ДИОГЕН] с эффектами',
+        'Префикс [YOUTUBE] с эффектами',
         'Команда /god (15 мин/день)',
         'Личный сундук 135 слотов',
         'Создание собственных миров',
@@ -318,27 +318,7 @@ export const privilegesByServer: Record<string, Privilege[]> = {
         'Эксклюзивный скин персонажа'
       ]
     },
-    {
-      name: 'Легенда Mellicemo',
-      price: '5055₽',
-      icon: 'Crown',
-      color: 'from-yellow-400 via-amber-500 to-orange-600',
-      features: [
-        'Все из Диоген',
-        'Доступ к /kit легенда',
-        'Приватные регионы безлимит',
-        'Телепортация /home безлимит',
-        'Полёт везде без ограничений',
-        'Префикс [ЛЕГЕНДА MELLICEMO] с эффектами',
-        'Личная команда модераторов',
-        'Создание собственных событий',
-        'Команда /god безлимит',
-        'Именная статуя на спавне',
-        'Эксклюзивный скин персонажа',
-        'Возможность создавать плагины',
-        'Влияние на развитие сервера'
-      ]
-    }
+
   ],
   skywars: [
     {
@@ -359,12 +339,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Sword',
       color: 'from-slate-600 to-slate-800',
       features: [
-        'Все из Путник',
-        'Доступ к /kit рыцарь',
+        'Все из LITE',
+        'Доступ к /kit warrior',
         'Выбор карты (1 раз в 30 мин)',
         'x2 опыта за победы',
         'Доступ к режиму Solo и Team',
-        'Префикс [РЫЦАРЬ]'
+        'Префикс [WARRIOR]'
       ]
     },
     {
@@ -373,13 +353,13 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Shield',
       color: 'from-blue-600 to-blue-800',
       features: [
-        'Все из Рыцарь',
-        'Доступ к /kit хранитель',
+        'Все из WARRIOR',
+        'Доступ к /kit elite',
         'Выбор карты без ограничений',
         'x3 опыта за победы',
         'Приоритетный вход в игры',
         'Уникальные скины для персонажа (2 шт)',
-        'Префикс [ХРАНИТЕЛЬ]',
+        'Префикс [ELITE]',
         'Доступ к VIP-лобби'
       ]
     },
@@ -389,12 +369,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Mountain',
       color: 'from-zinc-600 to-stone-700',
       features: [
-        'Все из Хранитель',
-        'Доступ к /kit титан',
+        'Все из ELITE',
+        'Доступ к /kit titan',
         'x5 опыта за победы',
         'Выбор режима игры',
         '5 эксклюзивных скинов',
-        'Префикс [ТИТАН]',
+        'Префикс [TITAN]',
         'Доступ к Elite-лобби',
         'Уникальные эффекты смерти'
       ]
@@ -405,12 +385,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Wand2',
       color: 'from-purple-600 to-indigo-700',
       features: [
-        'Все из Титан',
-        'Доступ к /kit магистр',
+        'Все из TITAN',
+        'Доступ к /kit master',
         'x7 опыта за победы',
         'Создание приватных игр (до 8 игроков)',
         '8 эксклюзивных скинов',
-        'Префикс [МАГИСТР]',
+        'Префикс [MASTER]',
         'Персональное лобби',
         'Команда /heal в лобби',
         'Уникальные trail-эффекты'
@@ -422,12 +402,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Gem',
       color: 'from-emerald-600 to-green-700',
       features: [
-        'Все из Магистр',
-        'Доступ к /kit властитель',
+        'Все из MASTER',
+        'Доступ к /kit legend',
         'x10 опыта за победы',
         'Модерация приватных игр',
         '12 эксклюзивных скинов',
-        'Префикс [ВЛАСТИТЕЛЬ]',
+        'Префикс [LEGEND]',
         'Эксклюзивное лобби',
         'Команда /fly в лобби',
         'Уникальные win-эффекты',
@@ -440,12 +420,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Skull',
       color: 'from-red-700 to-black',
       features: [
-        'Все из Властитель',
-        'Доступ к /kit повелитель',
+        'Все из LEGEND',
+        'Доступ к /kit overlord',
         'x13 опыта за победы',
         'Создание приватных игр (до 16 игроков)',
         '15 эксклюзивных скинов',
-        'Префикс [ПОВЕЛИТЕЛЬ]',
+        'Префикс [OVERLORD]',
         'Именная карта на сервере',
         'Персонализированные kill-эффекты',
         'Доступ к бета-режимам',
@@ -458,12 +438,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Pickaxe',
       color: 'from-orange-600 to-red-700',
       features: [
-        'Все из Повелитель',
-        'Доступ к /kit владыка',
+        'Все из OVERLORD',
+        'Доступ к /kit phoenix',
         'x16 опыта за победы',
         'Создание приватных игр (до 24 игроков)',
         '20 эксклюзивных скинов',
-        'Префикс [ВЛАДЫКА] с анимацией',
+        'Префикс [PHOENIX] с анимацией',
         'Именное лобби',
         'Создание собственных карт',
         'Уникальные spawn-эффекты',
@@ -476,12 +456,12 @@ export const privilegesByServer: Record<string, Privilege[]> = {
       icon: 'Globe',
       color: 'from-cyan-500 to-blue-600',
       features: [
-        'Все из Владыка',
-        'Доступ к /kit диоген',
+        'Все из PHOENIX',
+        'Доступ к /kit youtube',
         'x18 опыта за победы',
         'Создание приватных игр (безлимит)',
         '25 эксклюзивных скинов',
-        'Префикс [ДИОГЕН] с эффектами',
+        'Префикс [YOUTUBE] с эффектами',
         'Полная кастомизация лобби',
         'Создание режимов игры',
         'Эксклюзивные particle-эффекты',
@@ -489,26 +469,6 @@ export const privilegesByServer: Record<string, Privilege[]> = {
         'Личная статистика на табло'
       ]
     },
-    {
-      name: 'Легенда Mellicemo',
-      price: '5055₽',
-      icon: 'Crown',
-      color: 'from-amber-400 via-yellow-500 to-orange-600',
-      features: [
-        'Все из Диоген',
-        'Доступ к /kit легенда',
-        'x20 опыта за победы',
-        'Модерация всех игр',
-        'Безлимитные скины',
-        'Префикс [ЛЕГЕНДА MELLICEMO] с эффектами',
-        'Эксклюзивное лобби с памятником',
-        'Команда /fly в лобби',
-        'Уникальные win-эффекты',
-        'Именная карта на сервере',
-        'Влияние на развитие режима',
-        'Личная команда для организации ивентов',
-        'Статуя победителя в главном лобби'
-      ]
-    }
+
   ]
 };
