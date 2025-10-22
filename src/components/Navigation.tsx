@@ -3,18 +3,27 @@ import Icon from '@/components/ui/icon';
 interface NavigationProps {
   activeSection: string;
   onSectionChange: (section: string) => void;
+  userNickname?: string | null;
 }
 
-const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
+const Navigation = ({ activeSection, onSectionChange, userNickname }: NavigationProps) => {
   return (
     <nav className="fixed top-0 w-full bg-[#2C2C2C] border-b-4 border-black z-50 shadow-lg">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-2xl font-bold border-2 border-black pixelated">
-              MC
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-2xl font-bold border-2 border-black pixelated">
+                MC
+              </div>
+              <h1 className="text-2xl font-bold text-white minecraft-shadow">Mellicemo-Craft</h1>
             </div>
-            <h1 className="text-2xl font-bold text-white minecraft-shadow">Mellicemo-Craft</h1>
+            {userNickname && (
+              <div className="hidden lg:flex items-center gap-2 bg-[#3A3A3A] px-4 py-2 border-2 border-black">
+                <Icon name="User" size={18} className="text-green-400" />
+                <span className="text-white font-semibold">{userNickname}</span>
+              </div>
+            )}
           </div>
           <div className="hidden md:flex gap-6">
             {[

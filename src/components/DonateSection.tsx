@@ -22,9 +22,13 @@ interface DonateSectionProps {
   selectedServer: string;
   onServerChange: (serverId: string) => void;
   privileges: Privilege[];
+  userNickname?: string | null;
 }
 
-const DonateSection = ({ servers, selectedServer, onServerChange, privileges }: DonateSectionProps) => {
+const DonateSection = ({ servers, selectedServer, onServerChange, privileges, userNickname }: DonateSectionProps) => {
+  const handlePurchase = (privilegeName: string, price: string) => {
+    alert(`Покупка привилегии ${privilegeName} для игрока ${userNickname}\nЦена: ${price}\n\nВ демо-версии оплата недоступна.`);
+  };
   return (
     <section className="container mx-auto px-4 py-16 animate-fade-in">
       <h2 className="text-5xl font-extrabold text-center text-white mb-12 minecraft-shadow">
@@ -74,11 +78,18 @@ const DonateSection = ({ servers, selectedServer, onServerChange, privileges }: 
                 ))}
               </ul>
               <Button 
+                onClick={() => handlePurchase(priv.name, priv.price)}
                 className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg py-6 border-4 border-black shadow-lg"
               >
                 <Icon name="ShoppingCart" size={20} className="mr-2" />
                 Купить {priv.name}
               </Button>
+              {userNickname && (
+                <p className="text-white/80 text-sm text-center mt-3 font-medium">
+                  <Icon name="User" size={14} className="inline mr-1" />
+                  Ник: {userNickname}
+                </p>
+              )}
             </CardContent>
           </Card>
         ))}

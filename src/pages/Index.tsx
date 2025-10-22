@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HomeSection from '@/components/HomeSection';
 import DonateSection from '@/components/DonateSection';
@@ -6,17 +6,37 @@ import PrivilegesSection from '@/components/PrivilegesSection';
 import RulesSection from '@/components/RulesSection';
 import FAQSection from '@/components/FAQSection';
 import ContactsSection from '@/components/ContactsSection';
+import NicknameModal from '@/components/NicknameModal';
 import { servers, privilegesByServer } from '@/data/privilegesData';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [selectedServer, setSelectedServer] = useState('anarchy');
+  const [userNickname, setUserNickname] = useState<string | null>(null);
+  const [showNicknameModal, setShowNicknameModal] = useState(false);
+
+  useEffect(() => {
+    const savedNickname = localStorage.getItem('minecraft_nickname');
+    if (savedNickname) {
+      setUserNickname(savedNickname);
+    } else {
+      setShowNicknameModal(true);
+    }
+  }, []);
+
+  const handleNicknameSubmit = (nickname: string) => {
+    localStorage.setItem('minecraft_nickname', nickname);
+    setUserNickname(nickname);
+    setShowNicknameModal(false);
+  };
 
   const privileges = privilegesByServer[selectedServer] || privilegesByServer.survival;
 
   return (
     <div className="min-h-screen">
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
+      {showNicknameModal && <NicknameModal onSubmit={handleNicknameSubmit} />}
+      
+      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} userNickname={userNickname} />
 
       <div className="pt-24 pb-16">
         {activeSection === 'home' && <HomeSection onSectionChange={setActiveSection} />}
@@ -27,6 +47,7 @@ const Index = () => {
             selectedServer={selectedServer}
             onServerChange={setSelectedServer}
             privileges={privileges}
+            userNickname={userNickname}
           />
         )}
         
