@@ -6,50 +6,147 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [selectedServer, setSelectedServer] = useState('anarchy');
 
-  const privileges = [
-    {
-      name: 'VIP',
-      price: '299₽',
-      icon: 'Gem',
-      color: 'from-green-600 to-green-700',
-      features: [
-        'Цветной ник в чате',
-        'Доступ к /kit vip',
-        'Приватные регионы до 5',
-        'Телепортация /home (3 точки)'
-      ]
-    },
-    {
-      name: 'PREMIUM',
-      price: '599₽',
-      icon: 'Crown',
-      color: 'from-blue-600 to-blue-700',
-      features: [
-        'Все из VIP',
-        'Доступ к /kit premium',
-        'Приватные регионы до 10',
-        'Телепортация /home (7 точек)',
-        'Возможность летать в лобби',
-        'Префикс [PREMIUM]'
-      ]
-    },
-    {
-      name: 'ULTIMATE',
-      price: '1299₽',
-      icon: 'Sparkles',
-      color: 'from-yellow-500 to-amber-600',
-      features: [
-        'Все из PREMIUM',
-        'Доступ к /kit ultimate',
-        'Приватные регионы до 20',
-        'Телепортация /home (15 точек)',
-        'Креатив в приватном мире',
-        'Префикс [ULTIMATE]',
-        'Персональный саппорт'
-      ]
-    }
+  const servers = [
+    { id: 'anarchy', name: 'Анархия', icon: 'Flame', color: 'from-red-600 to-red-800' },
+    { id: 'survival', name: 'Выживание', icon: 'Trees', color: 'from-green-600 to-green-800' },
+    { id: 'skywars', name: 'Скайварс', icon: 'Swords', color: 'from-purple-600 to-purple-800' }
   ];
+
+  const privilegesByServer = {
+    anarchy: [
+      {
+        name: 'VIP',
+        price: '199₽',
+        icon: 'Flame',
+        color: 'from-orange-600 to-red-700',
+        features: [
+          'Цветной ник в чате',
+          'Доступ к /kit vip',
+          'Бессмертие 30 секунд после входа',
+          '2 дополнительных слота инвентаря'
+        ]
+      },
+      {
+        name: 'PREMIUM',
+        price: '499₽',
+        icon: 'Sword',
+        color: 'from-red-600 to-red-800',
+        features: [
+          'Все из VIP',
+          'Доступ к /kit premium',
+          'Бессмертие 60 секунд после входа',
+          '5 дополнительных слотов инвентаря',
+          'Возможность ставить точку /home',
+          'Префикс [PREMIUM]'
+        ]
+      },
+      {
+        name: 'ULTIMATE',
+        price: '999₽',
+        icon: 'Skull',
+        color: 'from-red-700 to-black',
+        features: [
+          'Все из PREMIUM',
+          'Доступ к /kit ultimate',
+          'Бессмертие 90 секунд после входа',
+          '10 дополнительных слотов',
+          '3 точки /home',
+          'Уникальный префикс [АНАРХ]',
+          'Приоритетный вход на сервер'
+        ]
+      }
+    ],
+    survival: [
+      {
+        name: 'VIP',
+        price: '299₽',
+        icon: 'Gem',
+        color: 'from-green-600 to-green-700',
+        features: [
+          'Цветной ник в чате',
+          'Доступ к /kit vip',
+          'Приватные регионы до 5',
+          'Телепортация /home (3 точки)'
+        ]
+      },
+      {
+        name: 'PREMIUM',
+        price: '599₽',
+        icon: 'Crown',
+        color: 'from-blue-600 to-blue-700',
+        features: [
+          'Все из VIP',
+          'Доступ к /kit premium',
+          'Приватные регионы до 10',
+          'Телепортация /home (7 точек)',
+          'Возможность летать в лобби',
+          'Префикс [PREMIUM]'
+        ]
+      },
+      {
+        name: 'ULTIMATE',
+        price: '1299₽',
+        icon: 'Sparkles',
+        color: 'from-yellow-500 to-amber-600',
+        features: [
+          'Все из PREMIUM',
+          'Доступ к /kit ultimate',
+          'Приватные регионы до 20',
+          'Телепортация /home (15 точек)',
+          'Креатив в приватном мире',
+          'Префикс [ULTIMATE]',
+          'Персональный саппорт'
+        ]
+      }
+    ],
+    skywars: [
+      {
+        name: 'VIP',
+        price: '249₽',
+        icon: 'Feather',
+        color: 'from-cyan-600 to-blue-700',
+        features: [
+          'Цветной ник в чате',
+          'Доступ к /kit vip перед игрой',
+          'Выбор карты (1 раз в час)',
+          'x2 опыта за победы'
+        ]
+      },
+      {
+        name: 'PREMIUM',
+        price: '549₽',
+        icon: 'Zap',
+        color: 'from-purple-600 to-purple-800',
+        features: [
+          'Все из VIP',
+          'Доступ к /kit premium',
+          'Выбор карты без ограничений',
+          'x3 опыта за победы',
+          'Доступ к режиму Solo и Team',
+          'Префикс [PRO]'
+        ]
+      },
+      {
+        name: 'ULTIMATE',
+        price: '1099₽',
+        icon: 'Trophy',
+        color: 'from-yellow-500 to-orange-600',
+        features: [
+          'Все из PREMIUM',
+          'Доступ к /kit ultimate',
+          'x5 опыта за победы',
+          'Приоритетный вход в игры',
+          'Уникальные скины для персонажа',
+          'Префикс [ЛЕГЕНДА]',
+          'Доступ к VIP-лобби'
+        ]
+      }
+    ]
+  };
+
+  const privileges = privilegesByServer[selectedServer as keyof typeof privilegesByServer] || privilegesByServer.survival;
 
   const faqItems = [
     {
@@ -180,6 +277,24 @@ const Index = () => {
             <h2 className="text-5xl font-extrabold text-center text-white mb-12 minecraft-shadow">
               Донат привилегии
             </h2>
+            
+            <div className="flex justify-center gap-4 mb-12 flex-wrap">
+              {servers.map((server) => (
+                <button
+                  key={server.id}
+                  onClick={() => setSelectedServer(server.id)}
+                  className={`flex items-center gap-3 px-8 py-4 font-bold text-lg transition-all duration-200 border-4 border-black ${
+                    selectedServer === server.id
+                      ? `bg-gradient-to-br ${server.color} text-white shadow-2xl scale-110`
+                      : 'bg-[#3A3A3A] text-gray-300 hover:bg-[#4A4A4A]'
+                  }`}
+                >
+                  <Icon name={server.icon} size={24} />
+                  {server.name}
+                </button>
+              ))}
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {privileges.map((priv, idx) => (
                 <Card key={idx} className={`bg-gradient-to-br ${priv.color} border-4 border-black hover:scale-105 transition-transform shadow-2xl`}>
