@@ -204,6 +204,21 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
       <h2 className="text-5xl font-extrabold text-center text-white mb-8 minecraft-shadow">
         Покупка кейсов
       </h2>
+      
+      <div className="mb-8 max-w-3xl mx-auto bg-gradient-to-r from-red-600 to-orange-600 border-4 border-black p-6 text-center animate-pulse">
+        <div className="flex items-center justify-center gap-3 mb-2">
+          <Icon name="Sparkles" size={32} className="text-yellow-300" />
+          <h3 className="text-3xl font-extrabold text-white minecraft-shadow">СКИДКА 35%!</h3>
+          <Icon name="Sparkles" size={32} className="text-yellow-300" />
+        </div>
+        <p className="text-white text-xl font-bold">
+          🎉 В честь открытия сервера! 🎉
+        </p>
+        <p className="text-yellow-200 text-lg mt-2">
+          Успей купить кейсы по выгодной цене!
+        </p>
+      </div>
+
       <p className="text-center text-gray-300 text-lg mb-12 max-w-2xl mx-auto">
         {selectedServer === 'anarchy' 
           ? 'Открывай кейсы и получай редкие предметы, оружие и ресурсы! Чем выше уровень кейса - тем круче награды.'

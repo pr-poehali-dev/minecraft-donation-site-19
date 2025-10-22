@@ -31,7 +31,7 @@ const PrivilegesSection = () => {
     ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
     ['Эксклюзивный скин', false, false, false, false, false, false, false, false, true, true],
     ['Создание плагинов', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '50₽', '180₽', '505₽', '1155₽', '1805₽', '2455₽', '3105₽', '3755₽', '4405₽', '5055₽']
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const anarchyData = [
@@ -52,7 +52,7 @@ const PrivilegesSection = () => {
     ['Личная команда модераторов', false, false, false, false, false, false, false, false, false, true],
     ['Проведение ивентов', false, false, false, false, false, false, false, false, false, true],
     ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '50₽', '180₽', '505₽', '1155₽', '1805₽', '2455₽', '3105₽', '3755₽', '4405₽', '5055₽']
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const skywarsData = [
@@ -85,7 +85,7 @@ const PrivilegesSection = () => {
     ['Именная карта', false, false, false, false, false, false, true, true, true, true],
     ['Статуя в главном лобби', false, false, false, false, false, false, false, false, false, true],
     ['Влияние на развитие', false, false, false, false, false, false, false, false, false, true],
-    ['Цена', '50₽', '180₽', '505₽', '1155₽', '1805₽', '2455₽', '3105₽', '3755₽', '4405₽', '5055₽']
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const data = selectedMode === 'survival' ? survivalData : selectedMode === 'anarchy' ? anarchyData : skywarsData;
