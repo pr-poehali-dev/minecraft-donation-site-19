@@ -41,7 +41,7 @@ const Index = () => {
 
       <footer className="bg-[#1A1A1A] border-t-4 border-black py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 font-medium">© 2024 Minecraft Server. Все права защищены.</p>
+          <p className="text-gray-400 font-medium">© 2024 Mellicemo-Craft. Все права защищены.</p>
           <p className="text-gray-500 text-sm mt-2">Сервер не является официальным проектом Mojang Studios</p>
         </div>
       </footer>

@@ -14,7 +14,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
             <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-2xl font-bold border-2 border-black pixelated">
               MC
             </div>
-            <h1 className="text-2xl font-bold text-white minecraft-shadow">MINE DONATE</h1>
+            <h1 className="text-2xl font-bold text-white minecraft-shadow">Mellicemo-Craft</h1>
           </div>
           <div className="hidden md:flex gap-6">
             {[

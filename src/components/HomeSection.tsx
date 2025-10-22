@@ -14,7 +14,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
           Добро пожаловать!
         </h2>
         <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Лучший сервер Minecraft с уникальными возможностями и дружным комьюнити
+          Лучший сервер Mellicemo-Craft с уникальными возможностями и дружным комьюнити
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Button 
@@ -58,7 +58,7 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
       <div className="text-center bg-gradient-to-r from-green-900/50 to-blue-900/50 p-12 border-4 border-black">
         <h3 className="text-3xl font-bold text-white mb-4 minecraft-shadow">IP сервера</h3>
         <code className="text-4xl font-bold text-yellow-400 bg-black/50 px-8 py-4 inline-block border-2 border-yellow-600">
-          play.minecraft-server.ru
+          play.mellicemo-craft.ru
         </code>
       </div>
     </section>

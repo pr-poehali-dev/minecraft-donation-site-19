@@ -100,6 +100,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: "Montserrat", sans-serif;
+    background-image: url("https://cdn.poehali.dev/projects/f7f923b3-5fd2-4673-a60e-d4d4586480d8/files/5b106e65-3e77-4ae6-9a68-87f082ec5052.jpg");
+    background-size: 256px 256px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
   }
 
   .minecraft-shadow {
