@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HomeSection from '@/components/HomeSection';
 import DonateSection from '@/components/DonateSection';
+import CoinsSection from '@/components/CoinsSection';
 import PrivilegesSection from '@/components/PrivilegesSection';
 import RulesSection from '@/components/RulesSection';
 import FAQSection from '@/components/FAQSection';
@@ -47,6 +48,15 @@ const Index = () => {
             selectedServer={selectedServer}
             onServerChange={setSelectedServer}
             privileges={privileges}
+            userNickname={userNickname}
+          />
+        )}
+        
+        {activeSection === 'coins' && (
+          <CoinsSection 
+            servers={servers}
+            selectedServer={selectedServer}
+            onServerChange={setSelectedServer}
             userNickname={userNickname}
           />
         )}

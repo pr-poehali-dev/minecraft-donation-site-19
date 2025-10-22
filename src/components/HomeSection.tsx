@@ -27,6 +27,14 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
           </Button>
           <Button 
             size="lg" 
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg px-8 py-6 border-4 border-black shadow-lg"
+            onClick={() => onSectionChange('coins')}
+          >
+            <Icon name="Coins" size={24} className="mr-2" />
+            Купить койны
+          </Button>
+          <Button 
+            size="lg" 
             variant="outline"
             className="bg-[#3A3A3A] hover:bg-[#4A4A4A] text-white font-bold text-lg px-8 py-6 border-4 border-black"
             onClick={() => onSectionChange('rules')}
