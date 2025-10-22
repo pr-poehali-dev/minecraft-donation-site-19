@@ -35,6 +35,14 @@ const HomeSection = ({ onSectionChange }: HomeSectionProps) => {
           </Button>
           <Button 
             size="lg" 
+            className="bg-purple-600 hover:bg-purple-700 text-white font-bold text-lg px-8 py-6 border-4 border-black shadow-lg"
+            onClick={() => onSectionChange('cases')}
+          >
+            <Icon name="Package" size={24} className="mr-2" />
+            Купить кейсы
+          </Button>
+          <Button 
+            size="lg" 
             variant="outline"
             className="bg-[#3A3A3A] hover:bg-[#4A4A4A] text-white font-bold text-lg px-8 py-6 border-4 border-black"
             onClick={() => onSectionChange('rules')}

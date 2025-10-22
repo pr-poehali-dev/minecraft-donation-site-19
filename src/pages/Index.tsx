@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import HomeSection from '@/components/HomeSection';
 import DonateSection from '@/components/DonateSection';
 import CoinsSection from '@/components/CoinsSection';
+import CasesSection from '@/components/CasesSection';
 import PrivilegesSection from '@/components/PrivilegesSection';
 import RulesSection from '@/components/RulesSection';
 import FAQSection from '@/components/FAQSection';
@@ -54,6 +55,15 @@ const Index = () => {
         
         {activeSection === 'coins' && (
           <CoinsSection 
+            servers={servers}
+            selectedServer={selectedServer}
+            onServerChange={setSelectedServer}
+            userNickname={userNickname}
+          />
+        )}
+        
+        {activeSection === 'cases' && (
+          <CasesSection 
             servers={servers}
             selectedServer={selectedServer}
             onServerChange={setSelectedServer}

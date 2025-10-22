@@ -30,6 +30,7 @@ const Navigation = ({ activeSection, onSectionChange, userNickname }: Navigation
               { id: 'home', label: 'Главная', icon: 'Home' },
               { id: 'donate', label: 'Донат', icon: 'ShoppingCart' },
               { id: 'coins', label: 'Койны', icon: 'Coins' },
+              { id: 'cases', label: 'Кейсы', icon: 'Package' },
               { id: 'privileges', label: 'Привилегии', icon: 'Award' },
               { id: 'rules', label: 'Правила', icon: 'BookOpen' },
               { id: 'faq', label: 'FAQ', icon: 'HelpCircle' },
