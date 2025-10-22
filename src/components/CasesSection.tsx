@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
@@ -22,7 +22,7 @@ interface Case {
   rewards: string[];
 }
 
-const cases: Case[] = [
+const anarchyCases: Case[] = [
   {
     id: 'starter',
     name: 'Стартовый кейс',
@@ -70,21 +70,77 @@ const cases: Case[] = [
   }
 ];
 
+const survivalCases: Case[] = [
+  {
+    id: 'privilege_knight',
+    name: 'Кейс "Рыцарь"',
+    price: 200,
+    icon: 'Sword',
+    color: 'from-slate-600 to-slate-800',
+    description: 'Шанс получить привилегию',
+    rewards: ['Привилегия Путник (60%)', 'Привилегия Рыцарь (30%)', 'Привилегия Хранитель (10%)', '100 койнов (бонус)']
+  },
+  {
+    id: 'privilege_guardian',
+    name: 'Кейс "Хранитель"',
+    price: 500,
+    icon: 'Shield',
+    color: 'from-blue-600 to-blue-800',
+    description: 'Повышенный шанс редких привилегий',
+    rewards: ['Привилегия Рыцарь (40%)', 'Привилегия Хранитель (35%)', 'Привилегия Титан (20%)', 'Привилегия Магистр (5%)']
+  },
+  {
+    id: 'privilege_titan',
+    name: 'Кейс "Титан"',
+    price: 1000,
+    icon: 'Mountain',
+    color: 'from-zinc-600 to-stone-700',
+    description: 'Высокие привилегии',
+    rewards: ['Привилегия Хранитель (30%)', 'Привилегия Титан (40%)', 'Привилегия Магистр (25%)', 'Привилегия Властитель (5%)']
+  },
+  {
+    id: 'privilege_master',
+    name: 'Кейс "Магистр"',
+    price: 2000,
+    icon: 'Wand2',
+    color: 'from-purple-600 to-indigo-700',
+    description: 'Элитные привилегии',
+    rewards: ['Привилегия Титан (25%)', 'Привилегия Магистр (40%)', 'Привилегия Властитель (30%)', 'Привилегия Повелитель (5%)']
+  },
+  {
+    id: 'privilege_legend',
+    name: 'Кейс "Легенда"',
+    price: 5000,
+    icon: 'Crown',
+    color: 'from-yellow-400 to-orange-600',
+    description: 'Легендарные привилегии',
+    rewards: ['Привилегия Властитель (30%)', 'Привилегия Повелитель (35%)', 'Привилегия Владыка (25%)', 'Привилегия Диоген (8%)', 'Привилегия Легенда Mellicemo (2%)']
+  }
+];
+
 const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }: CasesSectionProps) => {
-  const [quantities, setQuantities] = useState<Record<string, number>>(
-    cases.reduce((acc, c) => ({ ...acc, [c.id]: 1 }), {})
-  );
+  const cases = useMemo(() => {
+    if (selectedServer === 'anarchy') return anarchyCases;
+    if (selectedServer === 'survival') return survivalCases;
+    return [];
+  }, [selectedServer]);
+
+  const [quantities, setQuantities] = useState<Record<string, number>>({});
   const { toast } = useToast();
+
+  useMemo(() => {
+    setQuantities(cases.reduce((acc, c) => ({ ...acc, [c.id]: 1 }), {}));
+  }, [cases]);
 
   const handleQuantityChange = (caseId: string, delta: number) => {
     setQuantities(prev => ({
       ...prev,
-      [caseId]: Math.max(1, Math.min(99, prev[caseId] + delta))
+      [caseId]: Math.max(1, Math.min(99, (prev[caseId] || 1) + delta))
     }));
   };
 
   const handlePurchase = (caseItem: Case) => {
-    const quantity = quantities[caseItem.id];
+    const quantity = quantities[caseItem.id] || 1;
     const totalPrice = caseItem.price * quantity;
 
     if (!userNickname) {
@@ -102,17 +158,61 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
     });
   };
 
+  const availableServers = servers.filter(s => s.id === 'anarchy' || s.id === 'survival');
+
+  if (selectedServer === 'skywars') {
+    return (
+      <section className="container mx-auto px-4 py-16 animate-fade-in">
+        <h2 className="text-5xl font-extrabold text-center text-white mb-8 minecraft-shadow">
+          Покупка кейсов
+        </h2>
+        
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+          {servers.map(server => (
+            <button
+              key={server.id}
+              onClick={() => onServerChange(server.id)}
+              className={`flex items-center gap-3 px-8 py-4 font-bold text-lg transition-all duration-200 border-4 border-black ${
+                selectedServer === server.id
+                  ? `bg-gradient-to-br ${server.color} text-white shadow-2xl scale-110`
+                  : 'bg-[#3A3A3A] text-gray-300 hover:bg-[#4A4A4A]'
+              }`}
+            >
+              <Icon name={server.icon} size={24} />
+              {server.name}
+            </button>
+          ))}
+        </div>
+
+        <div className="max-w-2xl mx-auto text-center">
+          <Card className="bg-[#2C2C2C] border-4 border-black">
+            <CardContent className="p-12">
+              <Icon name="Package" size={64} className="text-gray-500 mx-auto mb-6" />
+              <h3 className="text-3xl font-bold text-white mb-4">Кейсы недоступны</h3>
+              <p className="text-gray-400 text-lg">
+                На режиме Скайварс кейсы не продаются. Выберите режим Анархия или Выживание для покупки кейсов.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="container mx-auto px-4 py-16 animate-fade-in">
       <h2 className="text-5xl font-extrabold text-center text-white mb-8 minecraft-shadow">
         Покупка кейсов
       </h2>
       <p className="text-center text-gray-300 text-lg mb-12 max-w-2xl mx-auto">
-        Открывай кейсы и получай редкие предметы, оружие и ресурсы! Чем выше уровень кейса - тем круче награды.
+        {selectedServer === 'anarchy' 
+          ? 'Открывай кейсы и получай редкие предметы, оружие и ресурсы! Чем выше уровень кейса - тем круче награды.'
+          : 'Открывай кейсы и получай привилегии со скидкой! Испытай удачу и выиграй топовую привилегию!'
+        }
       </p>
 
       <div className="flex justify-center gap-4 mb-12 flex-wrap">
-        {servers.map(server => (
+        {availableServers.map(server => (
           <button
             key={server.id}
             onClick={() => onServerChange(server.id)}
@@ -168,7 +268,7 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
                       <Icon name="Minus" size={20} />
                     </button>
                     <span className="text-white font-bold text-xl min-w-[40px] text-center">
-                      {quantities[caseItem.id]}
+                      {quantities[caseItem.id] || 1}
                     </span>
                     <button
                       onClick={() => handleQuantityChange(caseItem.id, 1)}
@@ -188,7 +288,7 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
               <div className="flex items-center justify-between mb-6 p-4 bg-[#1A1A1A] border-2 border-primary">
                 <span className="text-primary font-bold text-lg">Итого:</span>
                 <span className="text-primary font-bold text-2xl">
-                  {caseItem.price * quantities[caseItem.id]}₽
+                  {caseItem.price * (quantities[caseItem.id] || 1)}₽
                 </span>
               </div>
 
@@ -197,7 +297,7 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
                 className="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg py-6 border-4 border-black"
               >
                 <Icon name="ShoppingCart" size={24} className="mr-2" />
-                Купить {quantities[caseItem.id]} шт.
+                Купить {quantities[caseItem.id] || 1} шт.
               </Button>
             </CardContent>
           </Card>
@@ -216,12 +316,24 @@ const CasesSection = ({ servers, selectedServer, onServerChange, userNickname }:
           <div>
             <Icon name="Shuffle" size={24} className="text-primary mx-auto mb-2" />
             <p className="font-semibold">Случайные награды</p>
-            <p className="text-sm">Каждый кейс содержит один из предметов списка</p>
+            <p className="text-sm">
+              {selectedServer === 'anarchy' 
+                ? 'Каждый кейс содержит один из предметов списка'
+                : 'Шанс получить привилегию выше, чем её стоимость'
+              }
+            </p>
           </div>
           <div>
             <Icon name="TrendingUp" size={24} className="text-primary mx-auto mb-2" />
-            <p className="font-semibold">Выгодные наборы</p>
-            <p className="text-sm">Покупка нескольких кейсов сразу экономит время</p>
+            <p className="font-semibold">
+              {selectedServer === 'anarchy' ? 'Выгодные наборы' : 'Экономия до 70%'}
+            </p>
+            <p className="text-sm">
+              {selectedServer === 'anarchy'
+                ? 'Покупка нескольких кейсов сразу экономит время'
+                : 'Возможность получить дорогую привилегию за меньшую цену'
+              }
+            </p>
           </div>
         </div>
       </div>
