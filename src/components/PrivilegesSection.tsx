@@ -6,67 +6,86 @@ const PrivilegesSection = () => {
   const [selectedMode, setSelectedMode] = useState<'survival' | 'anarchy' | 'skywars'>('survival');
 
   const survivalData = [
-    ['Цветной ник', true, true, true, true, true, true],
-    ['Доступ к /kit', 'vip', 'premium', 'ultimate', 'elite', 'legend', 'imperator'],
-    ['Приватные регионы', '5', '10', '20', '50', '100', '∞'],
-    ['Точки /home', '3', '7', '15', '30', '50', '∞'],
-    ['Полет в лобби', false, true, true, true, true, true],
-    ['Полет в выживании', false, false, false, '30м/д', '∞', '∞'],
-    ['Креатив в приватном мире', false, false, true, true, true, true],
-    ['Команда /feed', false, false, false, false, false, false],
-    ['Команда /heal', false, false, false, false, '5м кд', 'без кд'],
-    ['Команда /god', false, false, false, false, '10м/д', '∞'],
-    ['Персональный саппорт', false, false, true, true, true, true],
-    ['Личный модератор', false, false, false, false, true, true],
-    ['Личная команда модераторов', false, false, false, false, false, true],
-    ['Приоритетная очередь саппорта', false, false, false, true, true, true],
-    ['Уникальные эффекты частиц', false, false, false, true, true, true],
-    ['Доступ к эксклюзивным мирам', false, false, false, false, true, true],
-    ['Создание собственных событий', false, false, false, false, false, true],
-    ['Именная статуя на спавне', false, false, false, false, false, true],
-    ['Эксклюзивный скин персонажа', false, false, false, false, false, true],
-    ['Цена', '299₽', '599₽', '1299₽', '2499₽', '4999₽', '7777₽']
+    ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
+    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Приватные регионы', '3', '7', '15', '30', '50', '75', '100', '150', '∞', '∞'],
+    ['Точки /home', '2', '5', '10', '20', '35', '50', '70', '100', '∞', '∞'],
+    ['Полет в лобби', false, true, true, true, true, true, true, true, true, true],
+    ['Полет в выживании', false, false, false, '20м/д', '40м/д', '60м/д', '90м/д', '∞', '∞', '∞'],
+    ['Креатив в приватном мире', false, false, true, true, true, true, true, true, true, true],
+    ['Команда /feed', false, false, false, false, true, true, true, true, true, true],
+    ['Команда /heal', false, false, false, false, false, false, true, true, true, true],
+    ['Команда /god', false, false, false, false, false, '5м/д', '8м/д', '10м/д', '15м/д', '∞'],
+    ['Персональный саппорт', false, false, true, true, true, true, true, true, true, true],
+    ['Личный модератор', false, false, false, false, true, true, true, true, true, true],
+    ['Личная команда модераторов', false, false, false, false, false, false, false, false, false, true],
+    ['Приоритетная очередь', false, false, false, true, true, true, true, true, true, true],
+    ['Уникальные эффекты частиц', false, false, false, true, true, true, true, true, true, true],
+    ['Доступ к эксклюзивным мирам', false, false, false, false, true, true, true, true, true, true],
+    ['Личный сундук', false, false, false, false, false, '54', '81', '108', '135', '∞'],
+    ['Создание варпов', false, false, false, false, false, true, true, true, true, true],
+    ['Создание своих миров', false, false, false, false, false, false, false, false, true, true],
+    ['Команды /time и /weather', false, false, false, false, false, false, false, false, true, true],
+    ['Создание событий', false, false, false, false, false, false, false, true, true, true],
+    ['Влияние на развитие', false, false, false, false, false, false, false, false, false, true],
+    ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
+    ['Эксклюзивный скин', false, false, false, false, false, false, false, false, true, true],
+    ['Создание плагинов', false, false, false, false, false, false, false, false, false, true],
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const anarchyData = [
-    ['Цветной ник', true, true, true, true, true, true],
-    ['Доступ к /kit', 'vip', 'premium', 'ultimate', 'elite', 'legend', 'imperator'],
-    ['Бессмертие после входа', '30с', '60с', '90с', '120с', '180с', '300с'],
-    ['Дополнительные слоты', '2', '5', '10', '15', '20', '30'],
-    ['Точки /home', '1', '1', '3', '5', '10', '20'],
-    ['Команда /feed', false, false, false, true, true, true],
-    ['Команда /heal', false, false, false, false, '5м кд', 'без кд'],
-    ['Полет', false, false, false, '15м/д', '30м/д', '∞'],
-    ['Команда /god', false, false, false, false, false, '10м/д'],
-    ['Личный сундук', false, false, false, false, '54', '108'],
-    ['Приоритетный вход', false, false, true, true, true, true],
-    ['Доступ к эксклюзивным зонам', false, false, false, false, false, true],
-    ['Именная статуя на спавне', false, false, false, false, false, true],
-    ['Цена', '199₽', '499₽', '999₽', '1999₽', '3999₽', '7777₽']
+    ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
+    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Бессмертие после входа', '30с', '60с', '90с', '120с', '150с', '180с', '240с', '270с', '300с', '360с'],
+    ['Дополнительные слоты', '2', '5', '10', '15', '20', '25', '28', '30', '35', '∞'],
+    ['Точки /home', false, '1', '3', '5', '7', '10', '15', '18', '25', '∞'],
+    ['Команда /feed', false, false, false, true, true, true, true, true, true, true],
+    ['Команда /heal', false, false, false, false, '5м кд', '3м кд', '1м кд', 'без кд', 'без кд', 'без кд'],
+    ['Полет', false, false, false, '15м/д', '25м/д', '40м/д', '60м/д', '90м/д', '∞', '∞'],
+    ['Команда /god', false, false, false, false, false, false, '5м/д', '8м/д', '12м/д', '∞'],
+    ['Личный сундук', false, false, false, false, '27', '54', '81', '108', '135', '∞'],
+    ['Приоритетный вход', false, false, true, true, true, true, true, true, true, true],
+    ['Подземные зоны', false, false, false, false, false, false, false, true, true, true],
+    ['Эксклюзивные миры', false, false, false, false, false, false, false, false, true, true],
+    ['Создание телепортов', false, false, false, false, false, false, false, false, true, true],
+    ['Личная команда модераторов', false, false, false, false, false, false, false, false, false, true],
+    ['Проведение ивентов', false, false, false, false, false, false, false, false, false, true],
+    ['Именная статуя на спавне', false, false, false, false, false, false, false, false, false, true],
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const skywarsData = [
-    ['Цветной ник', true, true, true, true, true, true],
-    ['Доступ к /kit', 'vip', 'premium', 'ultimate', 'elite', 'legend', 'imperator'],
-    ['Множитель опыта', 'x2', 'x3', 'x5', 'x8', 'x12', 'x20'],
-    ['Выбор карты', '1/час', '∞', '∞', '∞', '∞', '∞'],
-    ['Приоритетный вход в игры', false, false, true, true, true, true],
-    ['Уникальные скины', false, false, true, '5', '10', '∞'],
-    ['Доступ к VIP-лобби', false, false, true, false, false, false],
-    ['Доступ к Elite-лобби', false, false, false, true, false, false],
-    ['Персональное лобби', false, false, false, false, true, false],
-    ['Эксклюзивное лобби', false, false, false, false, false, true],
-    ['Уникальные эффекты смерти', false, false, false, true, true, true],
-    ['Уникальные trail-эффекты', false, false, false, false, true, true],
-    ['Уникальные win-эффекты', false, false, false, false, false, true],
-    ['Создание приватных игр', false, false, false, false, true, true],
-    ['Модерация приватных игр', false, false, false, false, false, true],
-    ['Команда /heal в лобби', false, false, false, false, true, true],
-    ['Команда /fly в лобби', false, false, false, false, false, true],
-    ['Выбор музыки в лобби', false, false, false, false, false, true],
-    ['Именная карта на сервере', false, false, false, false, false, true],
-    ['Личный саппорт команды', false, false, false, false, false, true],
-    ['Цена', '249₽', '549₽', '1099₽', '2199₽', '4299₽', '7777₽']
+    ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
+    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Множитель опыта', 'x1.5', 'x2', 'x3', 'x5', 'x7', 'x10', 'x13', 'x16', 'x18', 'x20'],
+    ['Выбор карты', '1/час', '30мин', '∞', '∞', '∞', '∞', '∞', '∞', '∞', '∞'],
+    ['Приоритетный вход', false, false, true, true, true, true, true, true, true, true],
+    ['Уникальные скины', false, false, '2', '5', '8', '12', '15', '20', '25', '∞'],
+    ['Доступ к VIP-лобби', false, false, true, true, true, true, true, true, true, true],
+    ['Доступ к Elite-лобби', false, false, false, true, true, true, true, true, true, true],
+    ['Персональное лобби', false, false, false, false, true, true, true, true, true, true],
+    ['Эксклюзивное лобби', false, false, false, false, false, true, true, true, true, true],
+    ['Именное лобби', false, false, false, false, false, false, false, true, true, true],
+    ['Лобби с памятником', false, false, false, false, false, false, false, false, false, true],
+    ['Эффекты смерти', false, false, false, true, true, true, true, true, true, true],
+    ['Trail-эффекты', false, false, false, false, true, true, true, true, true, true],
+    ['Win-эффекты', false, false, false, false, false, true, true, true, true, true],
+    ['Spawn-эффекты', false, false, false, false, false, false, false, true, true, true],
+    ['Particle-эффекты', false, false, false, false, false, false, false, false, true, true],
+    ['Kill-эффекты', false, false, false, false, false, false, true, true, true, true],
+    ['Приватные игры (игроков)', false, false, false, false, '8', '12', '16', '24', '∞', '∞'],
+    ['Модерация игр', false, false, false, false, false, true, true, true, true, true],
+    ['Команда /heal в лобби', false, false, false, false, true, true, true, true, true, true],
+    ['Команда /fly в лобби', false, false, false, false, false, true, true, true, true, true],
+    ['Создание карт', false, false, false, false, false, false, false, true, true, true],
+    ['Создание режимов', false, false, false, false, false, false, false, false, true, true],
+    ['Проведение турниров', false, false, false, false, false, true, true, true, true, true],
+    ['Организация ивентов', false, false, false, false, false, false, false, false, false, true],
+    ['Именная карта', false, false, false, false, false, false, true, true, true, true],
+    ['Статуя в главном лобби', false, false, false, false, false, false, false, false, false, true],
+    ['Влияние на развитие', false, false, false, false, false, false, false, false, false, true],
+    ['Цена', '77₽', '277₽', '777₽', '1777₽', '2777₽', '3777₽', '4777₽', '5777₽', '6777₽', '7777₽']
   ];
 
   const data = selectedMode === 'survival' ? survivalData : selectedMode === 'anarchy' ? anarchyData : skywarsData;
@@ -120,19 +139,23 @@ const PrivilegesSection = () => {
               <thead>
                 <tr className="border-b-4 border-black">
                   <th className="text-left py-4 px-4 font-bold text-lg sticky left-0 bg-[#2C2C2C]">Возможность</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-orange-400">VIP</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-red-400">PREMIUM</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-purple-400">ULTIMATE</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-indigo-400">ELITE</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-cyan-400">LEGEND</th>
-                  <th className="text-center py-4 px-4 font-bold text-lg text-yellow-400">IMPERATOR</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-gray-400">Путник</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-slate-400">Рыцарь</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-blue-400">Хранитель</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-stone-400">Титан</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-purple-400">Магистр</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-emerald-400">Властитель</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-red-400">Повелитель</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-orange-400">Владыка</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">Диоген</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">Легенда</th>
                 </tr>
               </thead>
               <tbody>
                 {data.map((row, idx) => (
                   <tr key={idx} className="border-b-2 border-gray-700 hover:bg-[#3A3A3A] transition-colors">
                     <td className="py-4 px-4 font-medium sticky left-0 bg-[#2C2C2C]">{row[0]}</td>
-                    {[1, 2, 3, 4, 5, 6].map(col => (
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(col => (
                       <td key={col} className="text-center py-4 px-4">
                         {typeof row[col] === 'boolean' ? (
                           row[col] ? (
