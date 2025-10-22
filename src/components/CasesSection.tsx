@@ -73,48 +73,48 @@ const anarchyCases: Case[] = [
 const survivalCases: Case[] = [
   {
     id: 'privilege_knight',
-    name: 'Кейс "Рыцарь"',
+    name: 'Кейс "ELITE"',
     price: 130,
     icon: 'Sword',
     color: 'from-slate-600 to-slate-800',
     description: 'Шанс получить привилегию',
-    rewards: ['Привилегия Путник (60%)', 'Привилегия Рыцарь (30%)', 'Привилегия Хранитель (10%)', '100 койнов (бонус)']
+    rewards: ['Привилегия LITE (60%)', 'Привилегия ELITE (30%)', 'Привилегия TITAN (10%)', '100 койнов (бонус)']
   },
   {
     id: 'privilege_guardian',
-    name: 'Кейс "Хранитель"',
+    name: 'Кейс "TITAN"',
     price: 325,
     icon: 'Shield',
     color: 'from-blue-600 to-blue-800',
     description: 'Повышенный шанс редких привилегий',
-    rewards: ['Привилегия Рыцарь (40%)', 'Привилегия Хранитель (35%)', 'Привилегия Титан (20%)', 'Привилегия Магистр (5%)']
+    rewards: ['Привилегия ELITE (40%)', 'Привилегия TITAN (35%)', 'Привилегия MASTER (20%)', 'Привилегия LEGEND (5%)']
   },
   {
     id: 'privilege_titan',
-    name: 'Кейс "Титан"',
+    name: 'Кейс "MASTER"',
     price: 650,
     icon: 'Mountain',
     color: 'from-zinc-600 to-stone-700',
     description: 'Высокие привилегии',
-    rewards: ['Привилегия Хранитель (30%)', 'Привилегия Титан (40%)', 'Привилегия Магистр (25%)', 'Привилегия Властитель (5%)']
+    rewards: ['Привилегия TITAN (30%)', 'Привилегия MASTER (40%)', 'Привилегия LEGEND (25%)', 'Привилегия OVERLORD (5%)']
   },
   {
     id: 'privilege_master',
-    name: 'Кейс "Магистр"',
+    name: 'Кейс "LEGEND"',
     price: 1300,
     icon: 'Wand2',
     color: 'from-purple-600 to-indigo-700',
     description: 'Элитные привилегии',
-    rewards: ['Привилегия Титан (25%)', 'Привилегия Магистр (40%)', 'Привилегия Властитель (30%)', 'Привилегия Повелитель (5%)']
+    rewards: ['Привилегия MASTER (25%)', 'Привилегия LEGEND (40%)', 'Привилегия OVERLORD (30%)', 'Привилегия PHOENIX (5%)']
   },
   {
     id: 'privilege_legend',
-    name: 'Кейс "Легенда"',
+    name: 'Кейс "LEGENDA"',
     price: 3250,
     icon: 'Crown',
     color: 'from-yellow-400 to-orange-600',
     description: 'Легендарные привилегии',
-    rewards: ['Привилегия Властитель (30%)', 'Привилегия Повелитель (35%)', 'Привилегия Владыка (25%)', 'Привилегия Диоген (8%)', 'Привилегия Легенда Mellicemo (2%)']
+    rewards: ['Привилегия OVERLORD (30%)', 'Привилегия PHOENIX (35%)', 'Привилегия PHOENIX+ (25%)', 'Привилегия DIOGEN (8%)', 'Привилегия LEGENDA (2%)']
   }
 ];
 

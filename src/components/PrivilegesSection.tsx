@@ -7,7 +7,7 @@ const PrivilegesSection = () => {
 
   const survivalData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
     ['Приватные регионы', '3', '7', '15', '30', '50', '75', '100', '150', '∞', '∞'],
     ['Точки /home', '2', '5', '10', '20', '35', '50', '70', '100', '∞', '∞'],
     ['Полет в лобби', false, true, true, true, true, true, true, true, true, true],
@@ -36,7 +36,7 @@ const PrivilegesSection = () => {
 
   const anarchyData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
     ['Бессмертие после входа', '30с', '60с', '90с', '120с', '150с', '180с', '240с', '270с', '300с', '360с'],
     ['Дополнительные слоты', '2', '5', '10', '15', '20', '25', '28', '30', '35', '∞'],
     ['Точки /home', false, '1', '3', '5', '7', '10', '15', '18', '25', '∞'],
@@ -57,7 +57,7 @@ const PrivilegesSection = () => {
 
   const skywarsData = [
     ['Цветной ник', true, true, true, true, true, true, true, true, true, true],
-    ['Доступ к /kit', 'путник', 'рыцарь', 'хранитель', 'титан', 'магистр', 'властитель', 'повелитель', 'владыка', 'диоген', 'легенда'],
+    ['Доступ к /kit', 'lite', 'elite', 'titan', 'master', 'legend', 'overlord', 'phoenix', 'phoenix+', 'diogen', 'legenda'],
     ['Множитель опыта', 'x1.5', 'x2', 'x3', 'x5', 'x7', 'x10', 'x13', 'x16', 'x18', 'x20'],
     ['Выбор карты', '1/час', '30мин', '∞', '∞', '∞', '∞', '∞', '∞', '∞', '∞'],
     ['Приоритетный вход', false, false, true, true, true, true, true, true, true, true],
@@ -147,8 +147,8 @@ const PrivilegesSection = () => {
                   <th className="text-center py-4 px-4 font-bold text-sm text-emerald-400">OVERLORD</th>
                   <th className="text-center py-4 px-4 font-bold text-sm text-red-400">PHOENIX</th>
                   <th className="text-center py-4 px-4 font-bold text-sm text-orange-400">PHOENIX+</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">PHOENIX++</th>
-                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">PHOENIX+++</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-cyan-400">DIOGEN</th>
+                  <th className="text-center py-4 px-4 font-bold text-sm text-yellow-400">LEGENDA</th>
                 </tr>
               </thead>
               <tbody>
